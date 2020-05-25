@@ -1,0 +1,204 @@
+
+		<body>
+		  <!-- Navbar -->
+		  <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+		    <div class="container">
+
+		      <!-- Brand -->
+		      <a class="navbar-brand waves-effect" href="#" target="_blank">
+		        <strong class="blue-text">CrApp</strong>
+		      </a>
+
+		      <!-- Collapse -->
+		      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+		        aria-expanded="false" aria-label="Toggle navigation">
+		        <span class="navbar-toggler-icon"></span>
+		      </button>
+
+		      <!-- Links -->
+		      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+		        <!-- Left -->
+		        <ul class="navbar-nav mr-auto">
+		          <li class="nav-item">
+		            <a class="nav-link waves-effect" href="https://mdbootstrap.com/docs/jquery/" target="_blank"></a>
+		          </li>
+		        </ul>
+
+		        <!-- Right -->
+		        <ul class="navbar-nav nav-flex-icons">
+
+		          <li class="nav-item">
+		            <a class="nav-link border border-light rounded waves-effect"
+		              target="_blank" (click)= 'logout()' >
+		              <i class="fab fa-github mr-2"></i>Déconnecter
+		            </a>
+		          </li>
+		        </ul>
+
+		      </div>
+		    </div>
+		  </nav>
+		  <!-- Navbar -->
+		<main>
+		    <div class="container">
+		      <!--Navbar-->
+		      <div class="row">
+		      </div>
+		      <nav class="navbar navbar-expand-lg navbar-dark mdb-color lighten-3 mt-3 mb-5">
+
+		        <!-- Navbar brand -->
+		        <span class="navbar-brand">Recherche a partir dun CIN:</span>
+		        <!-- Collapsible content -->
+		        <div class="collapse navbar-collapse" id="basicExampleNav">  
+		        </div>
+
+		        <ul class="navbar-nav nav-flex-icons">
+		          <li class="nav-item">
+		          <form class="card p-2 ">
+		            <div class="input-group">
+		              <input type="text" class="form-control" [(ngModel)] ='research' placeholder="Recherche" aria-label="Recipient's username" aria-describedby="basic-addon2">
+		              <div class="input-group-append">
+		                <button class="btn btn-secondary btn-md waves-effect m-0" type="button" (click) ='search()'>OK</button>
+		              </div>
+		            </div>
+		          </form>
+		          </li>
+		        </ul>
+		        <!-- Collapsible content -->
+		      </nav>
+		      <!--/.Navbar-->
+		      <!--Section: Products v.3-->
+		      <section class="text-center mb-4">
+		        <!--Grid row-->
+		        <div class="row wow fadeIn">     
+		          <div class="col-lg-8 col-md-6 mb-4">
+		            <div class="card">
+		            	<!-- if comissaire -->
+		            	<div class="block_commissaire" *ngIf="user_commissaire">
+			              <div class="card-body">
+			                <table id="example1" class="table table-bordered table-striped">
+			                  <thead>
+			                  <tr>
+			                    <th>date</th>
+			                    <th>type acte</th>
+			                    <th>Nom Acte</th>
+			                    <th>detail</th>
+			                  </tr>
+			                  </thead>
+			                  <tbody>
+			                  <tr>
+			                    <td>Presto</td>
+			                    <td>Opera 8.5</td>
+			                    <td>Win 95+ / OSX.2+</td>
+			                    <td> <button>ok</button> </td>
+			                  </tr>
+			                  <tr>
+			                    <td>Presto</td>
+			                    <td>Opera 9.0</td>
+			                    <td>Win 95+ / OSX.3+</td>
+			                    <td>-</td>
+			                  </tr>
+			                  
+			                  <tr>
+			                    <td>Misc</td>
+			                    <td>PSP browser</td>
+			                    <td>PSP</td>
+			                    <td>-</td>
+			                  </tr>
+			                  <tr>
+			                    <td>Other browsers</td>
+			                    <td>All others</td>
+			                    <td>-</td>
+			                    <td>-</td>
+			                  </tr>
+			                  <tr>
+			                    <td>Presto</td>
+			                    <td>Opera 8.5</td>
+			                    <td>Win 95+ / OSX.2+</td>
+			                    <td>-</td>
+			                  </tr>
+			                  <tr>
+			                    <td>Presto</td>
+			                    <td>Opera 9.0</td>
+			                    <td>Win 95+ / OSX.3+</td>
+			                    <td>-</td>
+			                  </tr>
+			                  
+			                  <tr>
+			                    <td>Misc</td>
+			                    <td>PSP browser</td>
+			                    <td>PSP</td>
+			                    <td>-</td>
+			                  </tr>
+			                  <tr>
+			                    <td>Other browsers</td>
+			                    <td>All others</td>
+			                    <td>-</td>
+			                    <td>-</td>
+			                  </tr>
+			                  </tbody>
+			                </table>
+			              </div>
+		              </div>
+		            	<!-- if comissaire -->
+
+		            	<!-- if police -->
+			            <div class="card-body" id="card_body_info"  *ngIf="user_police">
+	                  <div class="mask rgba-grey-strong d-flex justify-content-center align-items-center" style="color: black;">
+
+	                    <!-- Content -->
+	                    <div class="text-center white-text mx-5 wow fadeIn">
+	                      <h1 class="mb-4">
+	                        <strong>Desole</strong>
+	                      </h1>
+	                      <p>
+	                        <strong>votre compte ne peut pas voir tous ces actes Veuiller contacter commissaire</strong>
+	                      </p>
+
+	                      <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-outline-white btn-lg">contacter commissiare 
+	                        <i class="fas fa-graduation-cap ml-2"></i>
+	                      </a>
+	                    </div>
+	                    <!-- Content -->
+
+	                  </div>
+	                </div>
+		            	<!-- if police -->
+		            </div>
+		          </div>          
+		          <div class="col-lg-4 col-md-6 mb-4">
+		            <div class="card" id="card_right" *ngIf="user_commissaire || user_police">
+		              <p class="lead font-weight-bold">Information personnel </p>
+			            <div class="img_profil">
+			              <img src="assets/img/dadman.png" id="profil_img">
+			            </div>
+		              <br>
+			            <div class="info_all">
+			              <p> <strong>CIN : </strong> 4F3S8J</p>
+			              <p> <strong>Nom : </strong> RANDRINARISOA sitraka</p>
+			              <p> <strong>Prenoms : </strong> Niavo</p>
+			              <p> <strong>Date de Naissance : </strong> 11 mars 2020</p>
+			              <p> <strong>Niveau : </strong> 1</p>
+			              <br>
+			            </div>
+			              <span class="badge purple mr-1" id="more_detail_btn" (click) ='hide_detail()'> Plus Detail</span>
+		              		<p class="more_detail" *ngIf="user_detail" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dolor suscipit libero eos atque quia ipsa sint voluptatibus! Beatae sit assumenda asperiores iure at maxime atque repellendus maiores quia sapiente.</p>
+		          	</div>
+		        	</div>
+		        </div>
+		        <!--Grid row-->
+		      </section>
+		    </div>
+		  </main>
+		  <!--Main layout-->
+		  <!--Footer-->
+		  <footer class="page-footer text-center font-small mt-4 wow fadeIn" id="footer_style">
+		    <div class="footer-copyright py-3">
+		      © 2019 Copyright:
+		      <a href="https://mdbootstrap.com/education/bootstrap/" target="_blank"> EQIMA </a>
+		    </div>
+		    <!--/.Copyright-->
+		  </footer>
+		  <!--/.Footer-->
+		</body>

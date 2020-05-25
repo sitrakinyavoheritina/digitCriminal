@@ -1,0 +1,101 @@
+   
+<body class="grey lighten-3">
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+    <div class="container">
+      <!-- Brand -->
+      <a class="navbar-brand waves-effect" href="https://mdbootstrap.com/docs/jquery/" target="_blank">
+        <strong class="blue-text">CrApp</strong>
+      </a>
+      <!-- Collapse -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Left -->
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link waves-effect" href="#" target="_blank"></a>
+          </li>
+        </ul>
+        <!-- Right -->
+      </div>
+
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+  <!--Main layout-->
+  <!-- /.login-logo -->
+
+  <h2 class="my-5 h2 text-center" style="margin-top:25%;">CrApp</h2>
+  <div class="card" id="card_info_login">
+    <div id="card_login">
+      <p class="login-box-msg">Veuillez saisir votre identifiant et mots de passe</p>
+
+    <div class="m-t" >
+        <div class="input-group mb-3">
+          <input type="email" class="form-control" [(ngModel)] = 'name' placeholder="identifiant">
+          
+
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+          <br>
+          <!-- <small class="form-text text-muted login" *ngIf ='name.valid'>E-mail obligatoire</small> -->
+        </div>  
+        <div class="input-group mb-3">
+          <input type="password" class="form-control" [(ngModel)] = 'password' placeholder="Password">
+            <!-- <small class="text-muted">Full name as displayed on card</small> -->
+		          <div class="input-group-append">
+		            <div class="input-group-text">
+		              <span class="fas fa-lock"></span>
+		            </div>
+		          </div>
+          <!-- <small class="form-text text-muted login" >mots de passe obligatoire</small> -->
+
+        </div>
+        <div class="row">
+          <!-- /.col -->
+          <div class="col-8">
+          <small class="form-text text-muted login" *ngIf ='credential_invalid'>login ou mots de passe incorrect </small>
+       <!--      <small class="form-text text-muted login" *ngIf ='Form_invalid'>Tout les champs sont obligatoire </small> -->
+          </div>
+          <div class="col-4">
+            <span class="badge purple mr-1"><button (click)='login()' >OK</button></span>
+          </div>
+          <!-- /.col -->
+        </div>
+      </div>
+        
+
+    <!--   <p class="mb-1">
+        <a href="forgot-password.html">I forgot my password</a>
+      </p>
+      <p class="mb-0">
+        <a href="register.html" class="text-center">Register a new membership</a>
+      </p> -->
+    </div>
+<!--        <ngx-spinner bdColor = "rgba(51,51,51,0.8)"  size ="medium" color = 'blue' type = "ball-scale-multiple" >
+  			<p style="font-size: 20px; color: white"></p>
+ 			 </ngx-spinner> -->
+    <!-- /.login-card-body -->
+  </div>
+
+  <!--Main layout-->
+
+  <!--Footer-->
+ <footer class="page-footer text-center font-small mt-4 wow fadeIn" id="footer_style">
+    <div class="footer-copyright py-3">
+      © 2020 Copyright:
+      <a href="https://mdbootstrap.com/education/bootstrap/" target="_blank"> EQIMA </a>
+    </div>
+    <!--/.Copyright-->
+
+  </footer>
+
+</body>
