@@ -4,6 +4,7 @@ import { ResearchComponent } from './../pages/research/research.component';
 import { UserPoliceComponent } from './../pages/user-police/user-police.component';
 import { UserCommissaireComponent } from './../pages/user-commissaire/user-commissaire.component';
 import { UserPresidentComponent } from './../pages/user-president/user-president.component';
+import { QrcodeGeneratorComponent } from './../pages/qrcode-generator/qrcode-generator.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule ,Routes  } from '@angular/router';
@@ -13,6 +14,7 @@ import { RouterModule ,Routes  } from '@angular/router';
     RouterModule.forRoot([
       { path: '', redirectTo: 'login', pathMatch: 'full' },
       { path: 'login', component: LoginComponent },
+      { path: 'qrcode', component: QrcodeGeneratorComponent },
       { path: 'research', component: ResearchComponent },
       { path: 'police', component: UserPoliceComponent },
       { path: 'commissaire', component: UserCommissaireComponent },

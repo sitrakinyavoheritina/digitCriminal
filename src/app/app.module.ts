@@ -10,6 +10,12 @@ import { UserCommissaireComponent } from './pages/user-commissaire/user-commissa
 // import { NgxSpinnerModule } from "ngx-spinner";
 // import { DataTableModule } from 'ng-angular8-datatable';
 import { UserPresidentComponent } from './pages/user-president/user-president.component';
+import { QRCodeModule } from 'angularx-qrcode';
+import { QrcodeGeneratorComponent } from './pages/qrcode-generator/qrcode-generator.component';
+import { AngularFireModule } from 'angularfire2';
+import { environment } from './environment/environment';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 @NgModule({
   declarations: [
@@ -18,13 +24,18 @@ import { UserPresidentComponent } from './pages/user-president/user-president.co
     ResearchComponent,
     UserPoliceComponent,
     UserCommissaireComponent,
-    UserPresidentComponent
+    UserPresidentComponent,
+    QrcodeGeneratorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireDatabaseModule,
     FormsModule,
     ReactiveFormsModule,
+    QRCodeModule
     // NgxSpinnerModule,
     // DataTableModule
   ],
