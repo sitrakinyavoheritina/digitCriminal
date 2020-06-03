@@ -78,8 +78,8 @@
 		            	<!-- detail_act_info -->
 	            	  <div class="blockfull_info">
 	            			<div class="detail_act_info">
-							        <div class="input-group mb-3">
-							          <input type="password" class="form-control" [(ngModel)] = 'name' placeholder="Votre Nom">
+    					        <div class="input-group mb-3">
+							          <input type="number" class="form-control" [(ngModel)] = 'id_user' placeholder="identifiant">
 								          <div class="input-group-append">
 								            <div class="input-group-text">
 								              <span class="fas fa-lock"></span>
@@ -87,7 +87,7 @@
 								          </div>
 							        </div>
 							        <div class="input-group mb-3">
-							          <input type="password" class="form-control" [(ngModel)] = 'adress' placeholder="Adresse">
+							          <input type="text" class="form-control" [(ngModel)] = 'name' placeholder="Votre Nom">
 								          <div class="input-group-append">
 								            <div class="input-group-text">
 								              <span class="fas fa-lock"></span>
@@ -95,13 +95,14 @@
 								          </div>
 							        </div>
 							        <div class="input-group mb-3">
-							          <input type="password" class="form-control" [(ngModel)] = 'date_birth' placeholder="Date de Naissance">
+							          <input type="text" class="form-control" [(ngModel)] = 'adress' placeholder="Adresse">
 								          <div class="input-group-append">
 								            <div class="input-group-text">
 								              <span class="fas fa-lock"></span>
 								            </div>
 								          </div>
 							        </div>
+						
 
 							        <button class="btn btn-default" style="display: block;margin: auto;" (click) ='sendinfoInDataBase()' >generer</button>
 	            			</div>
